@@ -3,13 +3,13 @@ import Apollo
 
 enum RepositoriesGraphQLRequest: GraphQLRequest {
   
-  case searchRepositories()
+  case searchRepositories
 
   // MARK: - Conforming methods
   func provideValues()-> (queue: DispatchQueue, cachePolicy: CachePolicy) {
 
     switch self {
-    case .searchRepositories():
+    case .searchRepositories:
       return (queue: DispatchQueue.global(qos: .background), cachePolicy: CachePolicy.fetchIgnoringCacheData)
     }
   }

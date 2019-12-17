@@ -31,7 +31,7 @@ class RepoTableViewCell: UITableViewCell {
 
     func configure(with viewModel: RepoTableViewCellViewModel) {
         repoNameLabel.text = viewModel.repoName
-        starCountLabel.text = "\(viewModel.starCount)"
+        starCountLabel.text = "★ \(viewModel.starCount)"
         avatarImageView.kf.setImage(with: URL(string: viewModel.ownerAvatarUrl))
         ownerNameLabel.text = viewModel.ownerName
     }
