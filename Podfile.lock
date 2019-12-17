@@ -2,17 +2,23 @@ PODS:
   - Apollo (0.16.0):
     - Apollo/Core (= 0.16.0)
   - Apollo/Core (0.16.0)
+  - Kingfisher (5.12.0):
+    - Kingfisher/Core (= 5.12.0)
+  - Kingfisher/Core (5.12.0)
 
 DEPENDENCIES:
   - Apollo (= 0.16.0)
+  - Kingfisher (~> 5.12)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Apollo
+    - Kingfisher
 
 SPEC CHECKSUMS:
   Apollo: ad9ce2008f88fce57c062aa4853364b7927355c8
+  Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
 
-PODFILE CHECKSUM: 44dfbc16823c43175039756ab0801d01ab6494e0
+PODFILE CHECKSUM: 356520dddf5a5cd9a41fa9d2a7d894e75d3d85d3
 
-COCOAPODS: 1.8.1
+COCOAPODS: 1.8.4

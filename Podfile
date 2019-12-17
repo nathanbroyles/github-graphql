@@ -7,6 +7,7 @@ target 'GithubGraphQL' do
   use_frameworks!
 
   pod 'Apollo', '0.16.0'
+  pod 'Kingfisher', '~> 5.12'
 
   # Pods for GithubGraphQL
 
