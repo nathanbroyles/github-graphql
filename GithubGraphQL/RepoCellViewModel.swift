@@ -1,5 +1,5 @@
 //
-//  RepoTableViewCellViewModel.swift
+//  RepoCellViewModel.swift
 //  GithubGraphQL
 //
 //  Created by Nathan Broyles on 12/16/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RepoTableViewCellViewModel {
+struct RepoCellViewModel {
     
     let repoName: String
     let ownerName: String

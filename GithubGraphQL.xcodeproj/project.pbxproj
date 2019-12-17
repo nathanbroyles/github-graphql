@@ -10,10 +10,11 @@
 		2D0EBE7933A210CBDF1631C2 /* Pods_GithubGraphQLTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46721E35993F32712F0753A /* Pods_GithubGraphQLTests.framework */; };
 		66447F698A2C863913E91896 /* Pods_GithubGraphQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABCE96A0819665B92683A16A /* Pods_GithubGraphQL.framework */; };
 		7346F51CDA36DE5C51486FCC /* Pods_GithubGraphQLUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696FECE5EDEC8B0066CC5A95 /* Pods_GithubGraphQLUITests.framework */; };
+		D8A7402E23A93A3F00CCDBCA /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7402D23A93A3F00CCDBCA /* RepoListViewModel.swift */; };
 		D8CDA58D23A80F0F009C80DB /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CDA58C23A80F0F009C80DB /* RepoTableViewCell.swift */; };
-		D8CDA59023A80F3B009C80DB /* RepoTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CDA58F23A80F3B009C80DB /* RepoTableViewCellViewModel.swift */; };
+		D8CDA59023A80F3B009C80DB /* RepoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CDA58F23A80F3B009C80DB /* RepoCellViewModel.swift */; };
 		D9A10FA0216C4AFD007998EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A10F9F216C4AFD007998EC /* AppDelegate.swift */; };
-		D9A10FA2216C4AFD007998EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A10FA1216C4AFD007998EC /* ViewController.swift */; };
+		D9A10FA2216C4AFD007998EC /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A10FA1216C4AFD007998EC /* RepoListViewController.swift */; };
 		D9A10FA5216C4AFD007998EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A10FA3216C4AFD007998EC /* Main.storyboard */; };
 		D9A10FA7216C4AFD007998EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A10FA6216C4AFD007998EC /* Assets.xcassets */; };
 		D9A10FAA216C4AFD007998EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A10FA8216C4AFD007998EC /* LaunchScreen.storyboard */; };
@@ -56,11 +57,12 @@
 		AB1DCA7D862BEB7D144E7E13 /* Pods-GithubGraphQLTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubGraphQLTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GithubGraphQLTests/Pods-GithubGraphQLTests.release.xcconfig"; sourceTree = "<group>"; };
 		ABCE96A0819665B92683A16A /* Pods_GithubGraphQL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubGraphQL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46721E35993F32712F0753A /* Pods_GithubGraphQLTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubGraphQLTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8A7402D23A93A3F00CCDBCA /* RepoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
 		D8CDA58C23A80F0F009C80DB /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
-		D8CDA58F23A80F3B009C80DB /* RepoTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		D8CDA58F23A80F3B009C80DB /* RepoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCellViewModel.swift; sourceTree = "<group>"; };
 		D9A10F9C216C4AFD007998EC /* GithubGraphQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubGraphQL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A10F9F216C4AFD007998EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D9A10FA1216C4AFD007998EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D9A10FA1216C4AFD007998EC /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
 		D9A10FA4216C4AFD007998EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9A10FA6216C4AFD007998EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9A10FA9216C4AFD007998EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -166,8 +168,9 @@
 				D9A10FA3216C4AFD007998EC /* Main.storyboard */,
 				D9A10FCD216C4E71007998EC /* Managers */,
 				D8CDA58C23A80F0F009C80DB /* RepoTableViewCell.swift */,
-				D8CDA58F23A80F3B009C80DB /* RepoTableViewCellViewModel.swift */,
-				D9A10FA1216C4AFD007998EC /* ViewController.swift */,
+				D8CDA58F23A80F3B009C80DB /* RepoCellViewModel.swift */,
+				D9A10FA1216C4AFD007998EC /* RepoListViewController.swift */,
+				D8A7402D23A93A3F00CCDBCA /* RepoListViewModel.swift */,
 			);
 			path = GithubGraphQL;
 			sourceTree = "<group>";
@@ -464,15 +467,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9A10FA2216C4AFD007998EC /* ViewController.swift in Sources */,
+				D9A10FA2216C4AFD007998EC /* RepoListViewController.swift in Sources */,
 				D9A10FE8216C77CD007998EC /* GraphQLManager.swift in Sources */,
 				D9A10FF4216D93B8007998EC /* RepositoriesGraphQLRequest.swift in Sources */,
+				D8A7402E23A93A3F00CCDBCA /* RepoListViewModel.swift in Sources */,
 				D9C8E128216DBA11002A64FC /* API.swift in Sources */,
 				D9A10FF2216D7501007998EC /* GraphQLResult.swift in Sources */,
 				D8CDA58D23A80F0F009C80DB /* RepoTableViewCell.swift in Sources */,
 				D9A10FF0216C7805007998EC /* RepositoriesGraphQLClient.swift in Sources */,
 				D9A10FE9216C77CD007998EC /* GraphQLClientProtocol.swift in Sources */,
-				D8CDA59023A80F3B009C80DB /* RepoTableViewCellViewModel.swift in Sources */,
+				D8CDA59023A80F3B009C80DB /* RepoCellViewModel.swift in Sources */,
 				D9A10FA0216C4AFD007998EC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
