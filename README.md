@@ -1,58 +1,22 @@
 # The Peek iOS Coding Challenge
 
+<img src="https://cdn.worldvectorlogo.com/logos/graphql.svg" width="100" height="100" /><img src="https://d2z5w7rcu7bmie.cloudfront.net/assets/images/logo.png" width="100" height="100" />
 
-<img src="https://cdn.worldvectorlogo.com/logos/graphql.svg" width="200" height="200" /><img src="https://d2z5w7rcu7bmie.cloudfront.net/assets/images/logo.png" width="200" height="200" />
+## How I Solved It
 
+### View Models
+I created a `RepoListViewModel` class to handle functionality of fetching repos, storing cell view models, and to keep the `RepoListViewController` clean. The view controller has access to 2 closures, `repoFetchCompleted` and `repoFetchError`. `repoFetchCompleted` is used to refresh the table view and `repoFetchError` is used to display an error message and allow the user to retry the failed query. 
 
+`RepoCellViewModel` is used for the table view cells and is initialized with `RepositoryDetails`. Setting the `viewModel` property on my `RepoTableViewCell` will call `configure(with viewModel: RepoCellViewModel)` and display the relevant data in the cell.
 
-## Goal
+### Interaction
+- If a user scrolls within 100pts of the list bottom, more repos will be fetched.
+- If a user selects a cell, a `SFSafariViewController` will present the repo on GitHub.
 
-Build a small iPhone application that queries Github to get repositories that mention `GraphQL`.
-The results are to be displayed in a list view with pagination support.
-Remember it’s a demo and not a fully featured app! However, we would like to see code that you are proud of and that would you merge into the mainline of your project.
-Please explain in a README file the choices you made to complete the code challenge and list the things you would have added if you had more time to spend on it.
+### Libraries
+I used Kingfisher to download and cache the user's avatar images. 
 
-## Services
-The application will interface with the [Github V4 API](https://developer.github.com/v4)
-
-- [Perform a search](https://developer.github.com/v4/query)
-- [Search Result](https://developer.github.com/v4/object/searchresultitemconnection/)
-
-
-## Requirements
-
-Initial launch: fetch the initial set of repos that contain the string `graphql`
-Infinite scrolling: Fetch the next set of repository.
-Error handling
-Each table cell should contain:
-- The name of the repo
-- The owner login name
-- The owner avatar
-- The number of stars
-
-We are using MVVM at Peek to build iOS apps and we would like you to use it to build this demo app.
-
-## Setup
-This project uses [CocoaPods](https://cocoapods.org/) and leverages the [Apollo iOS client](https://github.com/apollographql/apollo-ios) to fetch data from a GraphQL API. In order to pull data from Github API, please generate an access [token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/).
-
-The `githubToken` varaible will need to be updated the `GraphQLClientProtocol.swift` file.
-
-## Libraries
-You are allowed to used third party libraries when appropriate.
-Use your good judgement and please justify the use (when necessary) of any third party library.
-
-## Specifications
-Language: Swift 5 or later
-Development environment: Xcode 10 or later
-Target: iOS 12 or later
-
-## Submission
-When finished, create a public Github repository with your solution.
-We want your code to represent the best of your abilities.
-Please also include any documentation or ramblings to help us better understand your submission and the coding choices you made.
- 
- 
-Finally, there are plenty of details that are purposefully vague here, because we want to give you leeway to be creative and show us your way of doing things. 
-
-## Question?
-If you have any questions, do not hesitate at all to ask (tony@peek.com).
+### With More Time I Would've...
+- Added UI and Unit tests to automatically verify functionality.
+- Created a different layout for iPads.
+- Allowed a user to interact with a repo by becoming a stargazer.
